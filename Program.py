@@ -5,11 +5,11 @@ valid = None
 recipeChoice = {}
 select = None
 
-for no, recipe in enumerate(recipes,1):       #Avaiable Recipes Listing
+for no, recipe in enumerate(recipes,1):
 	recipeChoice[str(no)] = recipe
 
 while valid != '0':
-	print(Fore.BLUE + "\nThe recipes available are:")
+	print(Fore.BLUE + "\nThe recipes available are:")   #Listing Available Recipes
 	print(Fore.WHITE + "--------------------------")
 
 	for no, recipe in enumerate(recipes,1):
