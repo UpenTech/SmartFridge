@@ -4,6 +4,7 @@ from colorama import Fore, Style
 valid = None
 recipeChoice = {}
 select = None
+itemsBuy = []
 
 for no, recipe in enumerate(recipes,1):
 	recipeChoice[str(no)] = recipe
@@ -29,3 +30,13 @@ while valid != '0':
 				print(Fore.GREEN + "OK")
 			else:
 				print(Fore.RED + "OUT OF STOCK!!")
+				if not item in itemsBuy:
+					itemsBuy.append(item)
+
+if itemsBuy == []:
+	print(Fore.YELLOW +"No need for shoping")
+else:
+	print(Fore.YELLOW + "Items to shop for:")
+	print(Fore.YELLOW + "-------------------")
+	for sn, items in enumerate(itemsBuy,1):
+		print(Fore.BLUE + f"{sn}: {items}")
