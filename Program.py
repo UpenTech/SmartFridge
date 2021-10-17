@@ -32,6 +32,7 @@ while valid != '0':
 				print(Fore.RED + "OUT OF STOCK!!")
 				if not item in itemsBuy:	#Add to Shopping Cart
 					itemsBuy.append(item)
+itemsBuy.sort(key=str.casefold)
 
 if itemsBuy == []:
 	print(Fore.YELLOW +"No need for shoping")
